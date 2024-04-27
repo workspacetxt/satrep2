@@ -1,0 +1,1817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:500,500,500,500,700,700|Open+Sans:300,400&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.dance.com/common/css/splide.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <title></title>
+</head>
+<style>
+        
+
+
+    .wrapper {
+        padding: 70px 0;
+    }
+
+    /* Default slide */
+    
+    /* Default styles for larger screens */
+/* Default styles for larger screens */
+.swiper-container {
+    width: 80%;
+    height: 40vw;
+    transition: opacity 0.6s ease;
+    margin-left: 137px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+    background-color: black;
+}
+
+.swiper-container.swiper-container-coverflow {
+    padding-top: 2%;
+}
+
+.swiper-container.loading {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.swiper-container:hover .swiper-button-prev,
+.swiper-container:hover .swiper-button-next {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: hidden;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide .entity-img {
+    display: none;
+}
+
+.swiper-slide .content {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 50%;
+    padding-left: 5%;
+    color: #fff;
+}
+
+.swiper-slide .content .title {
+    font-size: 2.6em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.swiper-slide .content .caption {
+    display: block;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+[class^="swiper-button-"] {
+    width: 44px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.swiper-button-prev {
+    transform: translateX(50px);
+}
+
+.swiper-button-next {
+    transform: translateX(-50px);
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .swiper-container {
+        width: 100%;
+        height: 80vw; /* Adjust the height as needed for smaller screens */
+        margin-left: 0;
+    }
+
+    .swiper-slide .content {
+        width: 80%;
+        padding-left: 10%;
+    }
+}
+
+/* Responsive styles for tablets */
+@media screen and (max-width: 1024px) {
+    .swiper-container {
+        width: 100%;
+        height: 90vw; /* Adjust the height as needed for tablets */
+        margin-left: 0;
+    }
+
+    .swiper-slide .content {
+        width: 70%;
+        padding-left: 8%;
+    }
+}
+
+/* Responsive styles for Nest Hub Max */
+@media screen and (max-width: 1280px) {
+    .swiper-container {
+        width: 90%;
+        height: 80vw; /* Adjust the height as needed for Nest Hub Max */
+        margin-left: 5%;
+    }
+
+    .swiper-slide .content {
+        width: 80%;
+        padding-left: 8%;
+    }
+}
+
+
+
+    
+     
+        
+
+    .glitch-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+     }
+     
+     .glitch {
+        position: relative;
+        font-size: 60px;
+        font-weight: 500;
+        color: #FFFFFF;
+        letter-spacing: 3px;
+        z-index: 1;
+     }
+     
+     .glitch:before,
+     .glitch:after {
+        display: block;
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+     }
+     
+     .glitch:before {
+        animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+        color: #00FFFF;
+        z-index: -1;
+     }
+     
+     .glitch:after {
+        animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+        color: #FF00FF;
+        z-index: -2;
+     }
+     
+     @keyframes glitch-it {
+        0% {
+           transform: translate(0);
+        }
+        20% {
+           transform: translate(-2px, 2px);
+        }
+        40% {
+           transform: translate(-2px, -2px);
+        }
+        60% {
+           transform: translate(2px, 2px);
+        }
+        80% {
+           transform: translate(2px, -2px);
+        }
+        to {
+           transform: translate(0);
+        }
+     }
+        </style>
+<style>
+    @font-face {
+    font-family: 'Open Sans Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-regular.woff');
+}</style>
+
+<style>
+    @font-face {
+    font-family: 'Open Sans Bold';
+    font-style: normal;
+    font-weight: 800;
+    src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/OpenSans-Bold.woff');
+}</style>
+
+
+<style>
+    @font-face {
+    font-family: 'Open Sans Bold';
+    font-style: normal;
+    font-weight: 800;
+    src: url('chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/OpenSans-Bold.woff');
+}</style>
+<style>
+    .dance-navbar--brand img {
+        animation: logoAnimation 2s ease-in-out infinite; /* Infinite loop */
+        animation-delay: 5s; /* Delay before each iteration */
+    }
+
+    @keyframes logoAnimation {
+        0% {
+            transform: scale(0.5) rotate(360deg); /* Fast initial scale and rotation */
+            opacity: 0; /* Start with opacity 0 */
+        }
+        50% {
+            transform: scale(0.2) rotate(180deg); /* Slight zoom-in and rotation halfway through animation */
+        }
+        100% {
+            transform: scale(1) rotate(0deg); /* Actual size and no rotation at the end */
+            opacity: 1; /* Full opacity */
+        }
+    }
+    .dance-navbar--brand span {
+        white-space: nowrap;
+        margin-left: -12px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #FFFFFF;
+        position: relative;
+        display: inline-block;
+        animation: bounce-glitch 2s ease-in-out infinite;
+        animation-delay: 5s;
+    }
+
+    @keyframes bounce-glitch {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-20px);
+        }
+        60% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .dance-navbar--brand span:before,
+    .dance-navbar--brand span:after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        
+    }
+
+    .dance-navbar--brand span:before {
+        animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+        color: #00FFFF;
+        z-index: -1;
+    }
+
+    .dance-navbar--brand span:after {
+        animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+        color: #FF00FF;
+        z-index: -2;
+    }
+
+    .dance-navbar--brand span:hover:before,
+    .dance-navbar--brand span:hover:after {
+        animation: none;
+    }
+    
+</style>
+<script>
+    // Function to reset the animation after a delay
+    function resetAnimation() {
+        setTimeout(function () {
+            document.querySelector('.dance-navbar--brand img').style.animation = 'none';
+            void document.querySelector('.dance-navbar--brand img').offsetWidth; // Trigger reflow
+            document.querySelector('.dance-navbar--brand img').style.animation = 'logoAnimation 1.5s ease-in-out';
+            resetAnimation(); // Call the function recursively for a loop
+        }, 5000); // 5 seconds delay before repeating the animation
+    }
+
+    // Initial call to start the animation
+    resetAnimation();
+</script>
+<body>
+    <section id="homie" class="dance-section dance-section-y50h806y ">
+        <div class="dance-section-y50h806y-frame-bottom dance-frame-bottom"></div>
+        <div class="">
+            <div class="container dance-row-ce0btes0-wrapper    ">
+                <div class="dance-row-ce0btes0  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dance-column-skur6jx8  1/1">
+                            <div class="dance-navbar--wrapper symbol--b5fb95d3-899f-41b8-a06e-6cb77950544a-wrapper ">
+                                <div class="dance-navbar symbol--b5fb95d3-899f-41b8-a06e-6cb77950544a dance-nav-8llzwikb ">
+                                    <div class="dance-navbar--brand">
+                                        <a href="/">
+                                            <img src="\static\images\NRITYA VERSE LOGO-03.png" alt="Logo Caption" width="100px"/>
+                                            <span data-text="Nritya Verse">Nritya Verse</span>
+                                        </a>
+                                    </div>
+                                    <button class="dance-navbar--toggle" data-target="#danceNavbarCollapse">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14 fa-fw " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                            <path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+                                        </svg>
+                                    </button>
+                                    <div class="dance-navbar--collapse collapse" id="danceNavbarCollapse">
+                                        <div class="dance-navbar--navs">
+                                            <ul class="dance-nav--links normalize">
+                                                <li class="">
+                                                    <a href="javascript:void(0);" onclick="scrollToSection('homie')"  class="dance-nav--link home  null">
+                                                        <span class="dance-nav--link-text">HOME</span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="javascript:void(0);" onclick="scrollToSection('aboutus')" class="dance-nav--link about-us  null">
+                                                        <span class="dance-nav--link-text">ABOUT US</span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="javascript:void(0);" onclick="scrollToSection('servicess')" class="dance-nav--link services  null">
+                                                        <span class="dance-nav--link-text">SERVICES</span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="javascript:void(0);" onclick="scrollToSection('gallary')"  class="dance-nav--link shop  null">
+                                                        <span class="dance-nav--link-text">GALLARY</span>
+                                                    </a>
+                                                </li>
+                                                <li class="">
+                                                    <a href="javascript:void(0);" onclick="scrollToSection('contact-section')" id="cont" class="dance-nav--link contact-us  null">
+                                                        <span class="dance-nav--link-text">CONTACT US</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div  class="dance-wrapper dance-heading-zsvxt5cz-wrapper ">
+                                <h1 class="dance-heading dance-heading-zsvxt5cz ">
+                                    <div class="glitch-wrapper">
+                                        <div class="glitch" data-text="We Are Waiting to Make You Groovy">We Are Waiting to Make You Groovy</div>
+                                     </div>
+                                </h1>
+                            </div>
+                            <div class="dance-text dance-text-vp5avhho ">
+                                <p>Let's Dance and spread positivity to everyone and enjoy everyone moment.&nbsp;</p>
+                            </div>
+                            <div class="dance-button-oky0or7p-wrapper  ">
+                                <!-- {% comment %} <a class="dance-btn dance-button-oky0or7p  null" href="/appointment">BOOK AN DEMO</a> {% endcomment %} -->
+                                <button class="button-49" role="button"onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLScHMBdAxH7b9xojJjs9-vTRV6sYrJ10tVmTaHKX51MJtJt9nw/viewform?pli=1'">Book an Demo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="aboutus" class="dance-section dance-section-y3qezij2 ">
+        <div class="">
+            <div class="container dance-row-a5zq80xu-wrapper    ">
+                <div class="dance-row-a5zq80xu  flex  ">
+                    <div class="col-lg-1/2 ">
+                        <div class="column-inner dance-column-wb9unx0g  1/2">
+                            <div class="dance-wrapper dance-image-sfwnwxn6-wrapper ">
+                                <img src="static\images\about_us.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/2 ">
+                        <div class="column-inner dance-column-wgkmlfcr  1/2">
+                            <div class="dance-wrapper dance-heading-ygfkt59k-wrapper ">
+                                <h2 class="dance-heading dance-heading-ygfkt59k ">
+                                    <span>
+                                        <p>About Us</p>
+                                    </span>
+                                </h2>
+                            </div>
+                            <!-- <div class="dance-text dance-text-bfhtk8tk ">
+                                <p>
+                                    <strong>. </strong>
+                                    <br>
+                                </p>
+                            </div> -->
+                            <div class="dance-text dance-text-ua2ypt0t">
+                                <p>Welcome to NrityaVerse – where dance becomes a journey of self-expression. With over six years of passion and expertise, we've crafted more than 60 captivating dance projects. From enchanting weddings to corporate events, NrityaVerse adds grace and elegance to every celebration. Beyond performances, we offer online and offline dance and yoga classes, creating a nurturing space for growth. Join us on this rhythmic journey, where we blend artistry with teaching excellence. NrityaVerse is not just a dance destination; it's a community that celebrates the beauty of movement.</p>
+                            </div>
+                            <!-- <div class="dance-button-dlbtnad0-wrapper  ">
+                                <a class="dance-btn dance-button-dlbtnad0  null" href="/about-us">MORE ABOUT US</a>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="servicess" class="dance-section dance-section-lsruioy4 ">
+        <div class="dance-section-lsruioy4-frame-top dance-frame-top"></div>
+        <div class="dance-section-lsruioy4-frame-bottom dance-frame-bottom"></div>
+        <div class="">
+            <div class="container dance-row-448r4bmx-wrapper    ">
+                <div class="dance-row-448r4bmx  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dance-column-aauqsa31  1/1">
+                            <div class="dance-wrapper dance-heading-4vje36q3-wrapper ">
+                                <h2 class="dance-heading dance-heading-4vje36q3 ">
+                                    <span>
+                                        <p>SERVICES</p>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="dance-text dance-text-vzjiyia9 ">
+                                <p>Industry valuable outlet petticoat xl proportion jacket braiding piece textile one-of-a-kind affection. Expensive classic edge sewing trendwatching influence availability &nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container dance-row-bxz1ypzg-wrapper    ">
+                <div class="dance-row-bxz1ypzg  flex  ">
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-ityugntc  1/3">
+                            <div class="dance-wrapper dance-image-41jilbvi-wrapper ">
+                                <img src="\static\images\dance.jpg"/>
+                            </div>
+                            <!-- <div class="dance-wrapper dance-image-6cpf8xc2-wrapper ">
+                                <img src="https://cdn.dance.com/5e3f05572ec26d00126dc051/619936f264830f0011b97e6d/images/service_umber_img1_3vkzg0hq.png" class="dance-image-6cpf8xc2 "/>
+                            </div> -->
+                            <div class="dance-wrapper dance-heading-0fbbbjnc-wrapper ">
+                                <h3 class="dance-heading dance-heading-0fbbbjnc ">
+                                    <span>
+                                        <p>dance classes</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-text dance-text-gpdt58iq ">
+                                <p>Providing regular dance classes of all age groups from professional trained teachers all classes mode are avilable.</p>
+                            </div>
+                            <a class="dance-wrapper dance-heading-ons26f4z-wrapper " href="/appointment"target="_blank">
+                                <h6 class="dance-heading dance-heading-ons26f4z ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-j2ldn975  1/3">
+                            <div class="dance-wrapper dance-image-n6k36iwb-wrapper ">
+                                <img src="static\images\wedding.JPG" class="dance-image-n6k36iwb "/>
+                            </div>
+                            <!-- <div class="dance-wrapper dance-image-ptx6eqbr-wrapper ">
+                                <img src="https://cdn.dance.com/5e3f05572ec26d00126dc051/619936f264830f0011b97e6d/images/service_umber_img2_wx8culsz.png" class="dance-image-ptx6eqbr "/>
+                            </div> -->
+                            <div class="dance-wrapper dance-heading-fwd6bjcw-wrapper ">
+                                <h3 class="dance-heading dance-heading-fwd6bjcw ">
+                                    <span>
+                                        <p>Wedding choreograpy</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-text dance-text-iauib5an ">
+                                <p>Providing everyone their "Bole Chudiya" & "Badtamiz Dil" moments with the best choreographies. We will make everyone groove to give that blockbuster performances </p>
+                            </div>
+                            <a class="dance-wrapper dance-heading-tfcii6yr-wrapper " href="/appointment"target="_blank">
+                                <h6 class="dance-heading dance-heading-tfcii6yr ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-w09nm6u9  1/3">
+                            <div class="dance-wrapper dance-image-i0hsuetk-wrapper ">
+                                <img src="static\images\yoga.jpg"/>
+                            </div>
+                            <!-- <div class="dance-wrapper dance-image-0htmxee0-wrapper ">
+                                <img src="https://cdn.dance.com/5e3f05572ec26d00126dc051/619936f264830f0011b97e6d/images/service_umber_img3_40fhc34p.png" class="dance-image-0htmxee0 "/>
+                            </div> -->
+                            <div class="dance-wrapper dance-heading-vo603a66-wrapper ">
+                                <h3 class="dance-heading dance-heading-vo603a66 ">
+                                    <span>
+                                        <p>Yoga & Fitness classes</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-text dance-text-byhxm4xy ">
+                                <p>Let's get fit by joining out yoga & fitness classes from certified instructors and get personalised diet charts from out dieticians.</p>
+                            </div>
+                            <a class="dance-wrapper dance-heading-6751hlrl-wrapper " href="/appointment"target="_blank">
+                                <h6 class="dance-heading dance-heading-6751hlrl ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="">
+            <div class="container dance-row-bxz1ypzg-wrapper    ">
+                <div class="dance-row-bxz1ypzg  flex  ">
+                    <!-- <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-ityugntc  1/3">
+                            <div class="dance-wrapper dance-image-41jilbvi-wrapper ">
+                                <img src="static\images\yoga.jpg"/>
+                            </div>
+                            <div class="dance-wrapper dance-image-6cpf8xc2-wrapper ">
+                                <img src="https://cdn.dance.com/5e3f05572ec26d00126dc051/619936f264830f0011b97e6d/images/service_umber_img1_3vkzg0hq.png" class="dance-image-6cpf8xc2 "/>
+                            </div>
+                            <div class="dance-wrapper dance-heading-0fbbbjnc-wrapper ">
+                                <h3 class="dance-heading dance-heading-0fbbbjnc ">
+                                    <span>
+                                        <p>Yoga & Fitness classes</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-text dance-text-gpdt58iq ">
+                                <p>Providing regular dance classes of all age groups from professional trained teachers all classes mode are avilable.</p>
+                            </div>
+                            <a class="dance-wrapper dance-heading-ons26f4z-wrapper " href="/appointment">
+                                <h6 class="dance-heading dance-heading-ons26f4z ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-j2ldn975  1/3">
+                            <div class="dance-wrapper dance-image-n6k36iwb-wrapper ">
+                                <img src="\static\images\school college.jpg" class="dance-image-n6k36iwb "/>
+                            </div>
+                            <!-- <div class="dance-wrapper dance-image-ptx6eqbr-wrapper ">
+                                <img src="https://cdn.dance.com/5e3f05572ec26d00126dc051/619936f264830f0011b97e6d/images/service_umber_img2_wx8culsz.png" class="dance-image-ptx6eqbr "/>
+                            </div> -->
+                            <div class="dance-wrapper dance-heading-fwd6bjcw-wrapper ">
+                                <h3 class="dance-heading dance-heading-fwd6bjcw ">
+                                    <span>
+                                        <p>School & College choreograpy</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-text dance-text-iauib5an ">
+                                <p>Make your event a blockbuster with our choreographies having 6 plus years of experience with many successfull events.</p>
+                            </div>
+                            <a class="dance-wrapper dance-heading-tfcii6yr-wrapper " href="/appointment"target="_blank">
+                                <h6 class="dance-heading dance-heading-tfcii6yr ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-w09nm6u9  1/3">
+                            <div class="dance-wrapper dance-image-i0hsuetk-wrapper ">
+                                <img src="\static\images\corporate.jpg"/>
+                            </div>
+                            <!-- <div class="dance-wrapper dance-image-0htmxee0-wrapper ">
+                                <img src="https://cdn.dance.com/5e3f05572ec26d00126dc051/619936f264830f0011b97e6d/images/service_umber_img3_40fhc34p.png" class="dance-image-0htmxee0 "/>
+                            </div> -->
+                            <div class="dance-wrapper dance-heading-vo603a66-wrapper ">
+                                <h3 class="dance-heading dance-heading-vo603a66 ">
+                                    <span>
+                                        <p>corporate events</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-text dance-text-byhxm4xy ">
+                                <p>Learn and groove with us and make your eve a hit with our choreographies from beginner to experts. We have moves for everyone.</p>
+                            </div>
+                            <a class="dance-wrapper dance-heading-6751hlrl-wrapper " href="/appointment" target="_blank">
+                                <h6 class="dance-heading dance-heading-6751hlrl ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- <div class="">
+            <div class="container dance-row-mvoji0cz-wrapper    ">
+                <div class="dance-row-mvoji0cz  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dance-column-jslvcfdr  1/1">
+                            <div class="dance-button-a2qt68f0-wrapper  ">
+                                <a class="dance-btn dance-button-a2qt68f0  null" href="/services">more services</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <section class="dance-section dance-section-hc0equsd ">
+        <div class="">
+            <div class="container dance-row-soza8jgx-wrapper    ">
+                <div class="dance-row-soza8jgx  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dance-column-jvfglx8f  1/1">
+                            <div class="dance-wrapper dance-heading-ytzy5c3z-wrapper ">
+                                <h2 class="dance-heading dance-heading-ytzy5c3z ">
+                                    <span>
+                                        <p>our work</p>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="dance-text dance-text-jzqr9dhn ">
+                                <p> Here is some gilimps  &nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gallery" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <iframe src="https://drive.google.com/file/d/1gt6KpZeVSuyy-uU9rWjxFQroTl_4WtvJ/preview"
+                        width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide">
+                    <iframe src="https://drive.google.com/file/d/1knvItyCcaNXLKSOOv7nle593NfxNMLg5/preview" width="100%"
+                        height="100%" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide">
+                    <iframe src="https://drive.google.com/file/d/159AeH1L3vS-9PvFgTJn6EeabieDdwF9F/preview" width="100%"
+                        height="100%" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide">
+                    <iframe src="https://drive.google.com/file/d/14Fd50UlpJPcFLVpfuv8MyBm_sUVl6271/preview" width="100%"
+                        height="100%" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+    
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev swiper-button-white"></div>
+            <div class="swiper-button-next swiper-button-white"></div>
+        </div>
+    
+       
+
+
+        
+        
+    </section>
+    <!-- <section class="dance-section dance-section-dlxuiqdh ">
+        <div class="dance-section-dlxuiqdh-frame-top dance-frame-top"></div>
+        <div class="dance-section-dlxuiqdh-frame-bottom dance-frame-bottom"></div>
+        <div class="">
+            <div class="container dance-row-d5p4oxq3-wrapper    ">
+                <div class="dance-row-d5p4oxq3  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dance-column-d3xyswbn  1/1">
+                            <div class="dance-wrapper dance-heading-xvt4ewju-wrapper ">
+                                <h2 class="dance-heading dance-heading-xvt4ewju ">
+                                    <span>
+                                        <p>testimonials</p>
+                                    </span>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container dance-row-uq5g8m4j-wrapper    ">
+                <div class="dance-row-uq5g8m4j  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dance-column-97xr75sk  1/1">
+                            <div class="dance-testimonialSlider-0al2z1xc ">
+                                <div class="splide">
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <li class="splide__slide">
+                                                <div class="testimonial">
+                                                    <div class="testimonial__content">
+                                                        <div class="content">
+                                                            <p>Launch party startup twitter hackathon network effects seed round sales termsheet non-disclosure agreement vesting period direct mailing crowdfunding pivot. Burn rate churn rate interaction design. Stealth stock market growth hacking crowdsource strategy early adopters disruptive holy grail validation buyer infographic.&nbsp;</p>
+                                                        </div>
+                                                        <span class="spacer"></span>
+                                                        <div class="testimonial__info">
+                                                            <div class="testimonial__info--text">
+                                                                <p>Rohan Martin</p>
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="testimonial">
+                                                    <div class="testimonial__content">
+                                                        <div class="content">
+                                                            <p>Launch party startup twitter hackathon network effects seed round sales termsheet non-disclosure agreement vesting period direct mailing crowdfunding pivot. Burn rate churn rate interaction design. Stealth stock market growth hacking crowdsource strategy early adopters disruptive holy grail validation buyer infographic.&nbsp;</p>
+                                                        </div>
+                                                        <span class="spacer"></span>
+                                                        <div class="testimonial__info">
+                                                            <div class="testimonial__info--text">
+                                                                <p>Michael Bodraj</p>
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="splide__slide">
+                                                <div class="testimonial">
+                                                    <div class="testimonial__content">
+                                                        <div class="content">
+                                                            <p>Launch party startup twitter hackathon network effects seed round sales termsheet non-disclosure agreement vesting period direct mailing crowdfunding pivot. Burn rate churn rate interaction design. Stealth stock market growth hacking crowdsource strategy early adopters disruptive holy grail validation buyer infographic.&nbsp;</p>
+                                                        </div>
+                                                        <span class="spacer"></span>
+                                                        <div class="testimonial__info">
+                                                            <div class="testimonial__info--text">
+                                                                <p>Stephen Skull</p>
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- <section class="dance-section dance-section-mot90er8 ">
+        <div class="">
+            <div class="container dance-row-by1jfekp-wrapper    ">
+                <div class="dance-row-by1jfekp  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dance-column-sge0yywl  1/1">
+                            <div class="dance-wrapper dance-heading-njuts3xt-wrapper ">
+                                <h2 class="dance-heading dance-heading-njuts3xt ">
+                                    <span>
+                                        <p>pricing</p>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="dance-text dance-text-6n6o2pv1 ">
+                                <p>Industry valuable outlet petticoat xl proportion jacket braiding piece textile one-of-a-kind affection. Expensive classic edge sewing trendwatching influence availability &nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container dance-row-4p74oxj0-wrapper    ">
+                <div class="dance-row-4p74oxj0  flex  ">
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-f9c7t3s2  1/3">
+                            <div class="dance-wrapper dance-heading-k6fc6trk-wrapper ">
+                                <h3 class="dance-heading dance-heading-k6fc6trk ">
+                                    <span>
+                                        <p>hair cut</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-line-hmakot5o-wrapper ">
+                                <hr class="dance-line-hmakot5o "/>
+                            </div>
+                            <div class="dance-text dance-text-2wuwgd3b ">
+                                <p>Social proof handshake growth hacking facebook business entrepreneur hackathon</p>
+                            </div>
+                            <div class="dance-wrapper dance-heading-wfpdz9wv-wrapper ">
+                                <h3 class="dance-heading dance-heading-wfpdz9wv ">
+                                    <span>
+                                        <p>$19</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <a class="dance-wrapper dance-heading-eba2x1to-wrapper " href="/appointment">
+                                <h6 class="dance-heading dance-heading-eba2x1to ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-peoc1une  1/3">
+                            <div class="dance-wrapper dance-heading-q6ta0qzg-wrapper ">
+                                <h3 class="dance-heading dance-heading-q6ta0qzg ">
+                                    <span>
+                                        <p>shaving</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-line-2yq10rxr-wrapper ">
+                                <hr class="dance-line-2yq10rxr "/>
+                            </div>
+                            <div class="dance-text dance-text-bovvm7wg ">
+                                <p>Social proof handshake growth hacking facebook business entrepreneur hackathon</p>
+                            </div>
+                            <div class="dance-wrapper dance-heading-5vdw2qqm-wrapper ">
+                                <h3 class="dance-heading dance-heading-5vdw2qqm ">
+                                    <span>
+                                        <p>$11</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <a class="dance-wrapper dance-heading-vqjntaaj-wrapper " href="/appointment">
+                                <h6 class="dance-heading dance-heading-vqjntaaj ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-4iq7n8zr  1/3">
+                            <div class="dance-wrapper dance-heading-xj4bpw42-wrapper ">
+                                <h3 class="dance-heading dance-heading-xj4bpw42 ">
+                                    <span>
+                                        <p>facial</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-line-wuat8e4g-wrapper ">
+                                <hr class="dance-line-wuat8e4g "/>
+                            </div>
+                            <div class="dance-text dance-text-dkl62ap3 ">
+                                <p>Social proof handshake growth hacking facebook business entrepreneur hackathon</p>
+                            </div>
+                            <div class="dance-wrapper dance-heading-66u41zpg-wrapper ">
+                                <h3 class="dance-heading dance-heading-66u41zpg ">
+                                    <span>
+                                        <p>$29</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <a class="dance-wrapper dance-heading-xiecyda0-wrapper " href="/appointment">
+                                <h6 class="dance-heading dance-heading-xiecyda0 ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container dance-row-nhygy7v4-wrapper    ">
+                <div class="dance-row-nhygy7v4  flex  ">
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-6oh8j97j  1/3">
+                            <div class="dance-wrapper dance-heading-n9jgw5ej-wrapper ">
+                                <h3 class="dance-heading dance-heading-n9jgw5ej ">
+                                    <span>
+                                        <p>hair wash</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-line-ekde2p0q-wrapper ">
+                                <hr class="dance-line-ekde2p0q "/>
+                            </div>
+                            <div class="dance-text dance-text-aiu3ntws ">
+                                <p>Social proof handshake growth hacking facebook business entrepreneur hackathon</p>
+                            </div>
+                            <div class="dance-wrapper dance-heading-nigtm310-wrapper ">
+                                <h3 class="dance-heading dance-heading-nigtm310 ">
+                                    <span>
+                                        <p>$15</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <a class="dance-wrapper dance-heading-ci4pb5zn-wrapper " href="/appointment">
+                                <h6 class="dance-heading dance-heading-ci4pb5zn ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-8eyjzxnu  1/3">
+                            <div class="dance-wrapper dance-heading-09vrx83f-wrapper ">
+                                <h3 class="dance-heading dance-heading-09vrx83f ">
+                                    <span>
+                                        <p>child haircut</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-line-4ogdnnaf-wrapper ">
+                                <hr class="dance-line-4ogdnnaf "/>
+                            </div>
+                            <div class="dance-text dance-text-054s4nc7 ">
+                                <p>Social proof handshake growth hacking facebook business entrepreneur hackathon</p>
+                            </div>
+                            <div class="dance-wrapper dance-heading-a6s47ri0-wrapper ">
+                                <h3 class="dance-heading dance-heading-a6s47ri0 ">
+                                    <span>
+                                        <p>$13</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <a class="dance-wrapper dance-heading-ry03exrn-wrapper " href="/appointment">
+                                <h6 class="dance-heading dance-heading-ry03exrn ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-k38hz3cm  1/3">
+                            <div class="dance-wrapper dance-heading-oclo4si8-wrapper ">
+                                <h3 class="dance-heading dance-heading-oclo4si8 ">
+                                    <span>
+                                        <p>hair dye</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-line-7kf7tpnl-wrapper ">
+                                <hr class="dance-line-7kf7tpnl "/>
+                            </div>
+                            <div class="dance-text dance-text-cxlax5sj ">
+                                <p>Social proof handshake growth hacking facebook business entrepreneur hackathon</p>
+                            </div>
+                            <div class="dance-wrapper dance-heading-rxs9468f-wrapper ">
+                                <h3 class="dance-heading dance-heading-rxs9468f ">
+                                    <span>
+                                        <p>$23</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <a class="dance-wrapper dance-heading-y9wrj0fw-wrapper " href="/appointment">
+                                <h6 class="dance-heading dance-heading-y9wrj0fw ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container dance-row-z9uavow1-wrapper    ">
+                <div class="dance-row-z9uavow1  flex  ">
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-fte6g7uj  1/3">
+                            <div class="dance-wrapper dance-heading-g60v5l04-wrapper ">
+                                <h3 class="dance-heading dance-heading-g60v5l04 ">
+                                    <span>
+                                        <p>beard trim</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-line-7b94dwbh-wrapper ">
+                                <hr class="dance-line-7b94dwbh "/>
+                            </div>
+                            <div class="dance-text dance-text-91zx6fjx ">
+                                <p>Social proof handshake growth hacking facebook business entrepreneur hackathon</p>
+                            </div>
+                            <div class="dance-wrapper dance-heading-5kns6d4j-wrapper ">
+                                <h3 class="dance-heading dance-heading-5kns6d4j ">
+                                    <span>
+                                        <p>$12</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <a class="dance-wrapper dance-heading-hpuekqiy-wrapper " href="/appointment">
+                                <h6 class="dance-heading dance-heading-hpuekqiy ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-o5xozyfn  1/3">
+                            <div class="dance-wrapper dance-heading-2w1u8vih-wrapper ">
+                                <h3 class="dance-heading dance-heading-2w1u8vih ">
+                                    <span>
+                                        <p>hair trim</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-line-amjrz2yv-wrapper ">
+                                <hr class="dance-line-amjrz2yv "/>
+                            </div>
+                            <div class="dance-text dance-text-eqmj2ogy ">
+                                <p>Social proof handshake growth hacking facebook business entrepreneur hackathon</p>
+                            </div>
+                            <div class="dance-wrapper dance-heading-93v2ivqh-wrapper ">
+                                <h3 class="dance-heading dance-heading-93v2ivqh ">
+                                    <span>
+                                        <p>$20</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <a class="dance-wrapper dance-heading-ea5pf58y-wrapper " href="/appointment">
+                                <h6 class="dance-heading dance-heading-ea5pf58y ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-ydhz1ugt  1/3">
+                            <div class="dance-wrapper dance-heading-evo7019h-wrapper ">
+                                <h3 class="dance-heading dance-heading-evo7019h ">
+                                    <span>
+                                        <p>hot towel shave</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-line-dvdwysyy-wrapper ">
+                                <hr class="dance-line-dvdwysyy "/>
+                            </div>
+                            <div class="dance-text dance-text-ulmh1g6g ">
+                                <p>Social proof handshake growth hacking facebook business entrepreneur hackathon</p>
+                            </div>
+                            <div class="dance-wrapper dance-heading-mhigx0fp-wrapper ">
+                                <h3 class="dance-heading dance-heading-mhigx0fp ">
+                                    <span>
+                                        <p>$35</p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <a class="dance-wrapper dance-heading-ah6hjmj1-wrapper " href="/appointment">
+                                <h6 class="dance-heading dance-heading-ah6hjmj1 ">
+                                    <span>
+                                        <p>book now</p>
+                                    </span>
+                                </h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- <section class="dance-section dance-section-5t2spq9t ">
+        <div class="dance-section-5t2spq9t-frame-top dance-frame-top"></div>
+        <div class="dance-section-5t2spq9t-frame-bottom dance-frame-bottom"></div>
+        <div class="">
+            <div class="container dance-row-7598r5dn-wrapper    ">
+                <div class="dance-row-7598r5dn  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dance-column-s9rzbxu2  1/1">
+                            <div class="dance-wrapper dance-heading-tzfiqbqy-wrapper ">
+                                <h2 class="dance-heading dance-heading-tzfiqbqy ">
+                                    <span>
+                                        <p>make an appointment</p>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="dance-text dance-text-89k3nqdo ">
+                                <p>Industry valuable outlet petticoat xl proportion jacket braiding piece textile one-of-a-kind affection. Expensive classic edge sewing trendwatching influence availability &nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container dance-row-jkbmn1f8-wrapper    ">
+                <div class="dance-row-jkbmn1f8  flex  ">
+                    <div class="col-lg-2/3 ">
+                        <div class="column-inner dance-column-s0eeaamc  2/3">
+                            <form id="hkqbv1wf">
+                                <div class="dance-customForm-hkqbv1wf ">
+                                    <div class="customform-field-wrapper customform-field-text customform-column-6 ">
+                                        <label class="form-field-label" for="xmtjrpc0"></label>
+                                        <input type="text" placeholder="Your Full Name" name="" id="xmtjrpc0" class="form-field-input "/>
+                                    </div>
+                                    <div class="customform-field-wrapper customform-field-email customform-column-6 ">
+                                        <label class="form-field-label" for="72hje740"></label>
+                                        <input type="email" placeholder="Your Email Address" name="" id="72hje740" class="form-field-input "/>
+                                    </div>
+                                    <div class="customform-field-wrapper customform-field-select customform-column-2 ">
+                                        <label class="form-field-label" for="ns424q4z"></label>
+                                        <select name="rohan rahian" id="ns424q4z" class="form-field-input ">
+                                            <option value="">Hair Cut </option>
+                                            <option value=" ">Shaving </option>
+                                            <option value="">Facial </option>
+                                            <option value="">Shampoo </option>
+                                            <option value="">Child Hair Cut </option>
+                                            <option value="">Hair Dye </option>
+                                            <option value="">Beard Trim </option>
+                                            <option value="">Massage </option>
+                                            <option value="">Hot Towel Shave </option>
+                                        </select>
+                                    </div>
+                                    <div class="customform-field-wrapper customform-field-date customform-column-2 ">
+                                        <label class="form-field-label" for="4964r7li"></label>
+                                        <input type="date" name="" id="4964r7li" class="form-field-input "/>
+                                    </div>
+                                    <div class="customform-field-wrapper customform-field-time customform-column-2 ">
+                                        <label class="form-field-label" for="0l3jl63i"></label>
+                                        <input type="time" name="" id="0l3jl63i" class="form-field-input "/>
+                                    </div>
+                                    <div class="customform-field-wrapper customform-field-textarea customform-column-6 ">
+                                        <label class="form-field-label" for="xucjtt6h"></label>
+                                        <textarea type="textarea" id="xucjtt6h" name="" class="form-field-input textarea "></textarea>
+                                    </div>
+                                    <div class="customform-field-wrapper">
+                                        <button type="submit" class="customform-button " id="">
+                                            BOOK AN APPOINTMENT
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" class="svg-inline--fa fa-spinner fa-w-16 fa-spin fa-fw customform-icon spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="display:none;margin-left:5px">
+                                                <path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <input type="hidden" name="_t" value=""/>
+                                    <input type="hidden" name="_sub" value="Custom Form from dance"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-4y9a91xa  1/3">
+                            <div class="dance-icon-bbqru8bx-wrapper  ">
+                                <span class="dance-icon dance-icon-bbqru8bx  null">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="dance-text dance-text-gt812fka ">
+                                <p>1174 Farnum Road, New York,</p>
+                                <p>NY, 10040</p>
+                            </div>
+                            <div class="dance-icon-ammja33n-wrapper  ">
+                                <span class="dance-icon dance-icon-ammja33n  null">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-alt" class="svg-inline--fa fa-phone-alt fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path fill="currentColor" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="dance-text dance-text-tth65gwu ">
+                                <p>
+                                    (+91) 212-304-5387 <br>(+91) 237-901-9532
+                                </p>
+                            </div>
+                            <div class="dance-icon-enmv9q1x-wrapper  ">
+                                <span class="dance-icon dance-icon-enmv9q1x  null">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="dance-text dance-text-yn4n3ibq ">
+                                <p>Info@barber.com</p>
+                                <p>Contact@barber.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- <section class="dance-section dance-section-f6trz9ik ">
+        <div class="">
+            <div class="container dance-row-txnf0gpx-wrapper    ">
+                <div class="dance-row-txnf0gpx  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dance-column-ftgwkear  1/1">
+                            <div class="dance-wrapper dance-heading-qnh5f0z0-wrapper ">
+                                <h2 class="dance-heading dance-heading-qnh5f0z0 ">
+                                    <span>
+                                        <p>shops</p>
+                                    </span>
+                                </h2>
+                            </div>
+                            <div class="dance-text dance-text-x4i1zu5o ">
+                                <p>Industry valuable outlet petticoat xl proportion jacket braiding piece textile one-of-a-kind affection. Expensive classic edge sewing trendwatching influence availability &nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container dance-row-z0jmr1je-wrapper    ">
+                <div class="dance-row-z0jmr1je  flex  ">
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-dyidtl09  1/3">
+                            <div class="dance-wrapper dance-image-fhli1ppq-wrapper ">
+                                <img src="https://cdn.dance.com/5e3f05572ec26d00126dc051/619936f264830f0011b97e6d/images/shop1_img_3d8yb46e.png" class="dance-image-fhli1ppq "/>
+                            </div>
+                            <div class="dance-wrapper dance-heading-9jtf88mv-wrapper ">
+                                <h3 class="dance-heading dance-heading-9jtf88mv ">
+                                    <span>
+                                        <p>
+                                            $12<br>Straight Razor
+                                        </p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-wrapper dance-heading-guwner21-wrapper ">
+                                <h6 class="dance-heading dance-heading-guwner21 ">
+                                    <span>
+                                        <p>buy now</p>
+                                    </span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-15qfzkig  1/3">
+                            <div class="dance-wrapper dance-image-bq7s5bso-wrapper ">
+                                <img src="https://cdn.dance.com/5e3f05572ec26d00126dc051/619936f264830f0011b97e6d/images/shop_img2_rsoygsiq.png" class="dance-image-bq7s5bso "/>
+                            </div>
+                            <div class="dance-wrapper dance-heading-xji6dwo2-wrapper ">
+                                <h3 class="dance-heading dance-heading-xji6dwo2 ">
+                                    <span>
+                                        <p>
+                                            $19<br>Scissors
+                                        </p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-wrapper dance-heading-nwxy3076-wrapper ">
+                                <h6 class="dance-heading dance-heading-nwxy3076 ">
+                                    <span>
+                                        <p>buy now</p>
+                                    </span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/3 ">
+                        <div class="column-inner dance-column-w5419z0r  1/3">
+                            <div class="dance-wrapper dance-image-gwsa4k5r-wrapper ">
+                                <img src="https://cdn.dance.com/5e3f05572ec26d00126dc051/619936f264830f0011b97e6d/images/home_shops3_img_hbyocs7l.png" class="dance-image-gwsa4k5r "/>
+                            </div>
+                            <div class="dance-wrapper dance-heading-lpo6zwra-wrapper ">
+                                <h3 class="dance-heading dance-heading-lpo6zwra ">
+                                    <span>
+                                        <p>
+                                            $39<br>Spray Wash
+                                        </p>
+                                    </span>
+                                </h3>
+                            </div>
+                            <div class="dance-wrapper dance-heading-pk9sgffe-wrapper ">
+                                <h6 class="dance-heading dance-heading-pk9sgffe ">
+                                    <span>
+                                        <p>buy now</p>
+                                    </span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container dance-row-jnx2i2pn-wrapper    ">
+                <div class="dance-row-jnx2i2pn  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dance-column-r6iyd71p  1/1">
+                            <div class="dance-button-atgle9u7-wrapper  ">
+                                <a class="dance-btn dance-button-atgle9u7  null" href="/shop">more products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section  id="contact-section" class="dance-section dance-section-l17ddk5a ">
+        <!-- <div class="dance-section-l17ddk5a-frame-top dance-frame-top"></div> -->
+        <div class="">
+            <div class="container dance-row-z7ry51sm-wrapper    ">
+                <div class="dance-row-z7ry51sm  flex  ">
+                    <div class="col-lg-1/4 col-md-2/5 ">
+                        <div class="column-inner dance-column-jztnyowv  1/4">
+                            <!-- <div class="dance-wrapper dance-image-f1kmgfks-wrapper ">
+                                <img src="https://cdn.dance.com/5e3f05572ec26d00126dc051/619936f264830f0011b97e6d/images/Logo_footer_img_g1a8j5ot.png" alt="logo" class="dance-image-f1kmgfks "/>
+                            </div> -->
+                            <div class="dance-text dance-text-yuoqmkaz ">
+                                <p>SOCIAL MEDIAS &nbsp;</p>
+                            </div>
+                            <ul class="dance-socialIcon-fk62ek8c  dance-socialIcon-fk62ek8c-wrapper ">
+                                <li class="whatsapp">
+                                    <a href="https://wa.me/your-phone-number" target="_blank" rel="noreferrer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00FF00" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                          </svg>
+                                    </a>
+                                </li>
+                                
+                                <li class = "youtube">
+                                    <a href="https://youtube.com/@nrityaverse?si=qbV75sgnrB5Kxx09" target="_blank" rel="noreferrer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FF0000">
+                                            <rect width="24" height="24" rx="3" fill="none"/>
+                                            <path d="M23.8 7.5s-.2-1.7-1-2.5c-.9-1-1.9-1-2.5-1C17.3 4 12 4 12 4s-5.3 0-7.3.5c-.6.1-1.6.1-2.5 1-.7.8-1 2.5-1 2.5S1 9 1 10v4c0 1.1.2 2.5.2 2.5s.2 1.7 1 2.5c.9 1 2.1.9 2.6 1C6.6 20 12 20 12 20s5.3 0 7.3-.5c.6-.1 1.6-.1 2.5-1 .7-.8 1-2.5 1-2.5s.2-1.7.2-2.5v-4c0-1.1-.2-2.5-.2-2.5zM10 15V9l5 3-5 3z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="instagram">
+                                    <a href="https://www.instagram.com/nrityaverse?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">
+                                        <svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.14286 4H118.857C121.697 4 124 6.30253 124 9.14286V118.857C124 121.697 121.697 124 118.857 124H9.14286C6.30253 124 4 121.697 4 118.857V9.14286C4 6.30254 6.30254 4 9.14286 4ZM118.857 0H9.14286C4.0934 0 0 4.0934 0 9.14286V118.857C0 123.907 4.0934 128 9.14286 128H118.857C123.907 128 128 123.907 128 118.857V9.14286C128 4.0934 123.907 0 118.857 0ZM44.5759 63.9152C44.5759 53.2277 53.2277 44.4062 64.0849 44.4062C74.7724 44.4062 83.5938 53.2277 83.5938 63.9152C83.5938 74.7723 74.7724 83.4241 64.0849 83.4241C53.2277 83.4241 44.5759 74.7723 44.5759 63.9152ZM51.3617 63.9152C51.3617 71.0402 57.1295 76.6384 64.0849 76.6384C71.0402 76.6384 76.6384 71.0402 76.6384 63.9152C76.6384 56.9598 71.0402 51.3616 64.0849 51.3616C56.9599 51.3616 51.3617 56.9598 51.3617 63.9152ZM84.2724 39.1473C86.817 39.1473 88.8527 41.183 88.8527 43.7277C88.8527 46.2723 86.817 48.308 84.2724 48.308C81.7277 48.308 79.692 46.2723 79.692 43.7277C79.692 41.183 81.7277 39.1473 84.2724 39.1473ZM95.6384 32.3616C100.049 36.7723 101.406 42.2009 101.746 48.308C102.085 54.5848 102.085 73.4152 101.746 79.692C101.406 85.7991 100.049 91.058 95.6384 95.6384C91.2277 100.049 85.7992 101.406 79.692 101.746C73.4152 102.085 54.5849 102.085 48.3081 101.746C42.2009 101.406 36.942 100.049 32.3617 95.6384C27.9509 91.058 26.5938 85.7991 26.2545 79.692C25.9152 73.4152 25.9152 54.5848 26.2545 48.308C26.5938 42.2009 27.9509 36.7723 32.3617 32.3616C36.942 27.9509 42.2009 26.5938 48.3081 26.2545C54.5849 25.9152 73.4152 25.9152 79.692 26.2545C85.7992 26.5938 91.2277 27.9509 95.6384 32.3616ZM86.4777 93.6027C89.7009 92.2455 92.4152 89.7009 93.6027 86.308C95.3325 82.1275 95.225 72.9247 95.1536 66.8186C95.141 65.7391 95.1295 64.7563 95.1295 63.9152C95.1295 63.1049 95.1408 62.1511 95.1533 61.0976C95.2247 55.0929 95.3345 45.852 93.6027 41.5223C92.2456 38.2991 89.7009 35.5848 86.4777 34.3973C82.148 32.6654 72.907 32.7752 66.9024 32.8466C65.849 32.8591 64.8951 32.8705 64.0849 32.8705C63.2438 32.8705 62.261 32.859 61.1814 32.8464C55.0754 32.775 45.8725 32.6674 41.692 34.3973C38.2992 35.7545 35.7545 38.2991 34.3974 41.5223C32.6655 45.852 32.7753 55.0929 32.8467 61.0976C32.8592 62.1511 32.8706 63.1049 32.8706 63.9152C32.8706 64.7563 32.8591 65.7391 32.8465 66.8187C32.7751 72.9247 32.6675 82.1275 34.3974 86.308C35.7545 89.7009 38.2992 92.2455 41.692 93.6027C45.8725 95.3325 55.0754 95.225 61.1814 95.1536C62.261 95.141 63.2438 95.1295 64.0849 95.1295C64.8951 95.1295 65.8489 95.1408 66.9024 95.1533C72.907 95.2247 82.148 95.3345 86.4777 93.6027Z"/>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-1/4 col-md-2/5 ">
+                        <div class="column-inner dance-column-qinxafqe  1/4">
+                            <div class="dance-wrapper dance-heading-n003sybd-wrapper ">
+                                <h5 class="dance-heading dance-heading-n003sybd ">
+                                    <span>
+                                        <p>quick links</p>
+                                    </span>
+                                </h5>
+                            </div>
+                            <ul class="dance-list dance-links-0y3za3e0 ">
+                                <li class="dance-list--item">
+                                    <a href="javascript:void(0);" onclick="scrollToSection('homie')" class="dance-list--link null">
+                                        <span class="dance-list--icon"></span>
+                                        <span class="dance-list--text">Home</span>
+                                    </a>
+                                </li>
+                                <li class="dance-list--item">
+                                    <a href="javascript:void(0);" onclick="scrollToSection('aboutus')" class="dance-list--link null">
+                                        <span class="dance-list--icon"></span>
+                                        <span class="dance-list--text">About Us</span>
+                                    </a>
+                                </li>
+                                <li class="dance-list--item">
+                                    <a href="javascript:void(0);" onclick="scrollToSection('servicess')" class="dance-list--link null">
+                                        <span class="dance-list--icon"></span>
+                                        <span class="dance-list--text">Services</span>
+                                    </a>
+                                </li>
+                                <li class="dance-list--item">
+                                    <a href="javascript:void(0);" onclick="scrollToSection('gallary')" class="dance-list--link null">
+                                        <span class="dance-list--icon"></span>
+                                        <span class="dance-list--text">Gallary</span>
+                                    </a>
+                                </li>
+                                <li class="dance-list--item">
+                                    <a href="javascript:void(0);" onclick="scrollToSection('contact-section')" class="dance-list--link null">
+                                        <span class="dance-list--icon"></span>
+                                        <span class="dance-list--text">Contact Us</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-1/4 col-md-2/5 ">
+                        <div class="column-inner dance-column-czexmmdv  1/4">
+                            <div class="dance-wrapper dance-heading-wy3fhjcj-wrapper ">
+                                <h5 class="dance-heading dance-heading-wy3fhjcj ">
+                                    <span>
+                                        <p>working hours</p>
+                                    </span>
+                                </h5>
+                            </div>
+                            <div class="dance-text dance-text-20q1g1no ">
+                                <p>Mon - Fri</p>
+                            </div>
+                            <div class="dance-text dance-text-5xb45s43 ">
+                                <p>9am - 8pm</p>
+                            </div>
+                            <div class="dance-text dance-text-x2h2ifdv ">
+                                <p>Weekend &nbsp;</p>
+                            </div>
+                            <div class="dance-text dance-text-u3deeuec ">
+                                <p>4pm - 8pm</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-1/4 col-md-2/5 ">
+                        <div class="column-inner dance-column-neoioufo  1/4">
+                            <div class="dance-icon-xdqrqw1g-wrapper  ">
+                                <span class="dance-icon dance-icon-xdqrqw1g  null">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="dance-text dance-text-9uyv2sl7 ">
+                                <p>NIT Faridabad, Haryana, India</p>
+                            </div>
+                            <div class="dance-icon-t1g3ftg6-wrapper  ">
+                                <span class="dance-icon dance-icon-t1g3ftg6  null">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-alt" class="svg-inline--fa fa-phone-alt fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path fill="currentColor" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="dance-text dance-text-o8cbctbq ">
+                                <p>
+                                    (+91) 7048950806
+                                </p>
+                            </div>
+                            <div class="dance-icon-xybdt5ba-wrapper  ">
+                                <span class="dance-icon dance-icon-xybdt5ba  null">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" class="svg-inline--fa fa-envelope fa-w-16 fa-fw icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="dance-text dance-text-jj0ylpa1 ">
+                                <p>nrityaverse@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container dance-row-flw65hoy-wrapper    ">
+                <div class="dance-row-flw65hoy  flex  ">
+                    <div class="col-lg-1/1 ">
+                        <div class="column-inner dance-column-tjn4srfc  1/1">
+                            <div class="dance-line-2gaglbu3-wrapper ">
+                                <hr class="dance-line-2gaglbu3 "/>
+                            </div>
+                            <div class="dance-text dance-text-nj7aghwa ">
+                                <p>Copyright</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        window.dance_PROJECT_ID = "619936f264830f0011b97e6d";
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            var sliderSelector = '.swiper-container';
+            var options = {
+                loop: true,
+                loopAdditionalSlides: 1,
+                speed: 800,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                arrows: true,
+                effect: 'coverflow',
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                grabCursor: true,
+                parallax: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    1023: {
+                        slidesPerView: 1,
+                        spaceBetween: 0
+                    }
+                },
+                on: {
+                    imagesReady: function () {
+                        this.el.classList.remove('loading');
+                    }
+                }
+            };
+        
+            var mySwiper = new Swiper(sliderSelector, options);
+            mySwiper.init();
+        });
+    </script>
+
+    <script>
+        
+          
+        function scrollToSection(sectionId) {
+            var targetSection = document.getElementById(sectionId);
+    
+            // Check if the section exists
+            if (targetSection) {
+                // Use smooth scrolling behavior
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+
+        (function popupButton() {
+            const popupLinks = document.querySelectorAll(`.popup-btn`);
+            popupLinks.forEach(element=>{
+                let popupId = element.getAttribute('href');
+                popupId = popupId.startsWith('#') ? popupId.substring(1) : popupId;
+                element.addEventListener('click', ()=>{
+                    if (!popupId)
+                        return;
+                    let popupRow = document.getElementById(popupId);
+                    let popupOverlayEl = popupRow === null || popupRow === void 0 ? void 0 : popupRow.parentElement;
+                    popupOverlayEl === null || popupOverlayEl === void 0 ? void 0 : popupOverlayEl.classList.add(`row-${popupId}-overlay`);
+                    popupRow === null || popupRow === void 0 ? void 0 : popupRow.classList.add(`modal-${popupId}-visible`);
+                }
+                );
+            }
+            );
+        }
+        )()
+    </script>
+    <script>
+        (function renderPopupModal({exitIntentPopup={}, onloadPopup={}, EXIT_INTENT, ONLOAD}) {
+            const modalVisibility = popupId=>{
+                let popupRow = document.getElementById(popupId);
+                let popupOverlayEl = popupRow === null || popupRow === void 0 ? void 0 : popupRow.parentElement;
+                popupOverlayEl === null || popupOverlayEl === void 0 ? void 0 : popupOverlayEl.classList.add(`row-${popupId}-overlay`);
+                popupRow === null || popupRow === void 0 ? void 0 : popupRow.classList.add(`modal-${popupId}-visible`);
+            }
+            ;
+
+            document.addEventListener('mouseleave', ()=>{
+                let interativeModal = localStorage.getItem(`${EXIT_INTENT + '-' + exitIntentPopup.id}`);
+
+                if (exitIntentPopup.id && !interativeModal) {
+                    modalVisibility(exitIntentPopup.id);
+                }
+            }
+            );
+            window.addEventListener('load', ()=>{
+                let onloadModal = localStorage.getItem(`${ONLOAD + '-' + onloadPopup.id}`);
+
+                if (onloadPopup.id && !onloadModal) {
+                    modalVisibility(onloadPopup.id);
+                }
+            }
+            );
+        }
+        )({
+            EXIT_INTENT: "EXIT_INTENT",
+            ONLOAD: "ONLOAD",
+            exitIntentPopup: undefined,
+            onloadPopup: undefined
+        })
+    </script>
+    <!-- <script src="https://cdn.dance.com/common/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.dance.com/common/js/splide.min.js"></script> -->
+    <script type="text/javascript">
+        ;(function() {
+            var navbar = $(".dance-nav-8llzwikb");
+            (function($, navbar) {
+                $(navbar).on("click", "a", function(e) {
+                    var a = event.target.closest("a");
+                    var hash = a.hash;
+
+                    if (hash) {
+                        var baseHref = a.href.match(/(^https?:.+)#/);
+                        var baseURI = a.baseURI.match(/(^https?:.+)#?/);
+                        baseHref = baseHref && baseHref[1];
+                        baseURI = baseURI && baseURI[1];
+
+                        if (baseHref && baseURI && baseURI.includes(baseHref)) {
+                            e.preventDefault();
+                            const section = $(hash).offset();
+                            if (!section)
+                                return;
+                            var navbarHeight = event.currentTarget.clientHeight;
+                            var scrollTop = section.top - navbarHeight;
+                            var options = {
+                                easing: "linear"
+                            };
+                            $("html, body").animate({
+                                scrollTop: scrollTop
+                            }, options);
+                        }
+                    }
+                });
+            }
+            )($, navbar);
+        }
+        )();
+
+        ;(function() {
+            var navbar = document.querySelector(".dance-nav-8llzwikb");
+            (function toggleNav(el) {
+                const toggleBtn = el.querySelector(".dance-navbar--toggle");
+                const navlist = toggleBtn.nextElementSibling;
+                const isMobileView = window.innerWidth < 768;
+                toggleBtn && toggleBtn.addEventListener("click", function(e) {
+                    const hasShow = navlist === null || navlist === void 0 ? void 0 : navlist.classList.contains("show");
+
+                    if (!hasShow) {
+                        expend(navlist);
+                    } else {
+                        collapse(navlist);
+                    }
+                });
+                navlist.addEventListener("click", function(e) {
+                    if (e.target.closest("a") && !e.target.closest(".is-dropdown")) {
+                        isMobileView && collapse(navlist);
+                    } else {
+                        var _e$target$parentNode;
+
+                        var linkValue = e.target.closest("a").href;
+
+                        if (linkValue.startsWith("#")) {
+                            e.preventDefault();
+                        }
+
+                        const dropdownlist = (_e$target$parentNode = e.target.parentNode) === null || _e$target$parentNode === void 0 ? void 0 : _e$target$parentNode.nextElementSibling;
+                        const hasShow = dropdownlist === null || dropdownlist === void 0 ? void 0 : dropdownlist.classList.contains("show");
+
+                        if (hasShow) {
+                            collapse(dropdownlist);
+                        } else {
+                            expend(dropdownlist);
+                        }
+                    }
+                });
+                let dropdownItems = document.querySelectorAll(".dance-nav--dropdown");
+                dropdownItems.forEach(item=>{
+                    item === null || item === void 0 ? void 0 : item.addEventListener("click", ()=>{
+                        collapse(navlist);
+                        collapse(item);
+                    }
+                    );
+                }
+                );
+
+                function expend(navlist) {
+                    if (!navlist)
+                        return;
+                    navlist.classList.add("show");
+                    const height = navlist.clientHeight + "px";
+                    isMobileView && navlist.classList.add("collapsing");
+                    setTimeout(()=>{
+                        navlist.style.height = height;
+                    }
+                    , 0);
+                    setTimeout(()=>{
+                        navlist.style.height = null;
+                        navlist.classList.remove("collapsing");
+                    }
+                    , 350);
+                }
+
+                function collapse(navlist) {
+                    if (!navlist)
+                        return;
+                    navlist.style.height = navlist.clientHeight + "px";
+                    isMobileView && navlist.classList.add("collapsing");
+                    setTimeout(()=>{
+                        navlist.style.height = null;
+                    }
+                    , 0);
+                    setTimeout(()=>{
+                        navlist.classList.remove("show");
+                        navlist.classList.remove("collapsing");
+                    }
+                    , 350);
+                }
+            }
+            )(navbar);
+
+        }
+        )();
+
+        ;(function() {
+            var element = document.querySelector(".dance-testimonialSlider-0al2z1xc");
+            var splide = element.querySelector(".splide");
+            new Splide(splide,{
+                "perPage": 1,
+                "perMove": 1,
+                "height": "",
+                "autoplay": false,
+                "gap": "5px",
+                "type": "loop",
+                "direction": "rtl",
+                "rewind": true,
+                "arrows": true,
+                "pagination": false,
+                "speed": "322",
+                "breakpoints": {
+                    "420": {
+                        "perPage": 1,
+                        "perMove": 1
+                    },
+                    "768": {
+                        "perPage": 1,
+                        "perMove": 1
+                    }
+                }
+            }).mount()
+        }())
+        ;
+        (function() {
+            var elem = $("#hkqbv1wf");
+            function triggerSpinner(el, status) {
+                el.find(".spinner").css("display", status ? "inline-block" : "none");
+            }
+
+            ;(function injectUniqId(elem) {
+                const uniqId = Math.random().toString(36).substring(2, 8);
+                var input = document.createElement("input");
+                input.type = "hidden";
+                input.value = uniqId;
+                input.name = "_uid";
+                elem.append(input);
+            }
+            )(elem);
+            $(elem).on("submit", function(e) {
+                e.preventDefault();
+                var that = this;
+                triggerSpinner(elem, true);
+                $(that).find(".success-message").remove();
+                $(that).find(".error-message").remove();
+                var data = $(that).serialize();
+                $.ajax({
+                    url: "/v2/sites/action/contact",
+                    method: "POST",
+                    data: data,
+                    success: function(data) {
+                        var msgClass = data.success === true ? "success-message" : "error-message";
+                        var message = data.success === true ? "Successful Form Submission" : data.message;
+                        var $div = $("<div>", {
+                            class: msgClass,
+                            html: message
+                        });
+                        $(that).append($div);
+                        triggerSpinner(elem, false);
+
+                    },
+                    error: function(error) {
+                        var $div = $("<div>", {
+                            class: "error-message",
+                            html: error.message || "Something went wrong! Check the fields"
+                        });
+                        $(that).append($div);
+                        triggerSpinner(elem, false);
+                    }
+                });
+            });
+        }
+        )();
+    </script>
+</body>
+</html>
